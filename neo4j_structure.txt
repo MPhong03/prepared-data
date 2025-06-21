@@ -1,0 +1,25 @@
+Mô tả chi tiết:
+
+(Major)-[:HAS_PROGRAMME]->(Programme) = Ngành học đang có những chương trình đào tạo
+
+(Programme)-[:HAS_MAJOR]->(Major) = Chương trình đào tạo đang có những ngành
+
+(MajorProgramme)-[:OF_MAJOR]->(Major) = Chi tiết ngành học này thuộc ngành nào
+
+(MajorProgramme)-[:OF_PROGRAMME]->(Programme) = Chi tiết ngành học này thuộc ngành nào
+
+(MajorProgramme)-[:OF_YEAR]->(Year) = Chi tiết ngành học này thuộc năm nào
+
+(Year)-[:HAS_DOCUMENT]->(Document) = Năm này có những tài liệu nào
+
+(Year)-[:HAS_TUITION]->(Tuition) = Năm này có các tài liệu học phí nào
+
+(Year)-[:HAS_MAJORPROGRAMME]->(MajorProgramme) = Năm này có những chi tiết ngành học nào
+
+(Programme)-[:HAS_TUITION]->(Tuition) = Chương trình đào tạo này có những tài liệu học phí nào
+
+(Tuition)-[:OF_PROGRAMME]->(Programme) = Tài liệu học phí này thuộc chương trình đào tạo nào
+
+(Tuition)-[:OF_YEAR]->(Year) = Tài liệu học phí này thuộc năm nào
+
+(Scholarship)-[:OF_YEAR]->(Year) = Tài liệu học bổng này thuộc năm nào
